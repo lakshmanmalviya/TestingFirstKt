@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fragements.Home">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/skybg"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/spotify" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/facebook" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/google" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_3dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_10dp">
+
+            <TextView
+                android:id="@+id/all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/skybg"
+                android:contextClickable="true"
+                android:hapticFeedbackEnabled="false"
+                android:paddingLeft="@dimen/padding_20dp"
+                android:paddingTop="@dimen/padding_5dp"
+                android:paddingRight="@dimen/padding_20dp"
+                android:paddingBottom="@dimen/padding_5dp"
+                android:text="All"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20sp" />
+
+            <TextView
+                android:id="@+id/music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/skybg"
+                android:contextClickable="true"
+                android:paddingLeft="@dimen/padding_20dp"
+                android:paddingTop="@dimen/padding_5dp"
+                android:paddingRight="@dimen/padding_20dp"
+                android:paddingBottom="@dimen/padding_5dp"
+                android:text="Music"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20sp" />
+
+            <TextView
+                android:id="@+id/playlist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/skybg"
+                android:contextClickable="true"
+                android:paddingLeft="@dimen/padding_20dp"
+                android:paddingTop="@dimen/padding_5dp"
+                android:paddingRight="@dimen/padding_20dp"
+                android:paddingBottom="@dimen/padding_5dp"
+                android:text="Playlist"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20sp" />
+
+            <TextView
+                android:id="@+id/podcast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/skybg"
+                android:contextClickable="true"
+                android:paddingLeft="@dimen/padding_20dp"
+                android:paddingTop="@dimen/padding_5dp"
+                android:paddingRight="@dimen/padding_20dp"
+                android:paddingBottom="@dimen/padding_5dp"
+                android:text="Podcast"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20sp" />
+
+            <TextView
+                android:id="@+id/artist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/skybg"
+                android:contextClickable="true"
+                android:paddingLeft="@dimen/padding_20dp"
+                android:paddingTop="@dimen/padding_5dp"
+                android:paddingRight="@dimen/padding_20dp"
+                android:paddingBottom="@dimen/padding_5dp"
+                android:text="Artist"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20sp" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:layout_weight="1"
+
+                android:background="@drawable/skybg"
+                android:contextClickable="true"
+                android:paddingLeft="@dimen/padding_20dp"
+                android:paddingTop="@dimen/padding_5dp"
+                android:paddingRight="@dimen/padding_20dp"
+                android:paddingBottom="@dimen/padding_5dp"
+                android:text="Play"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20sp" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:layout_weight="1"
+                android:background="@drawable/skybg"
+                android:contextClickable="true"
+                android:paddingLeft="@dimen/padding_20dp"
+                android:paddingTop="@dimen/padding_5dp"
+                android:paddingRight="@dimen/padding_20dp"
+                android:paddingBottom="@dimen/padding_5dp"
+                android:text="PlayList"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20sp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

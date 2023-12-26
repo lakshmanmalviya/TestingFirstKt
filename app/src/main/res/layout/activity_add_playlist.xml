@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.AddPlaylist">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_10dp">
+
+            <ImageView
+                android:id="@+id/playlistBrImg"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/skybg"
+                android:scaleType="centerCrop"
+                app:srcCompat="@android:drawable/stat_sys_upload_done" />
+
+            <EditText
+                android:id="@+id/playlistNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logoImageView"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginRight="@dimen/margin_20dp"
+                android:background="@drawable/edittextbg"
+                android:hint="Playlist Name"
+                android:inputType="text"
+                android:padding="@dimen/margin_15dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20sp"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addPlaylist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pwdInput"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_30dp"
+                android:layout_marginRight="@dimen/margin_20dp"
+                android:background="@drawable/greenbg"
+                android:fontFamily="@font/agblaregular"
+                android:padding="@dimen/padding_10dp"
+                android:text="Add Playlist"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_25sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
