@@ -21,12 +21,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(bnd?.root)
         supportActionBar?.hide()
         auth = FirebaseAuth.getInstance();
+        if(auth.currentUser!=null){
+           //send to home activity/master
+        }
         bnd.manualSign.setOnClickListener {
             var intent = Intent(applicationContext, EmailPwdSignUp::class.java)
+            intent.putExtra("signup","signup");
             startActivity(intent)
         }
         bnd.mobileNumber.setOnClickListener {
             var intent = Intent(applicationContext, MasterAllPage::class.java)
+            startActivity(intent)
+        }
+        bnd.login.setOnClickListener {
+            var intent = Intent(applicationContext, EmailPwdSignUp::class.java)
+            intent.putExtra("login","login");
             startActivity(intent)
         }
     }

@@ -15,7 +15,8 @@ class AddPlaylist : AppCompatActivity() {
     private lateinit var database: FirebaseDatabase
     private lateinit var storage: FirebaseStorage
     private lateinit var myref: DatabaseReference
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         bnd = ActivityAddPlaylistBinding.inflate(layoutInflater)
         setContentView(bnd.root)

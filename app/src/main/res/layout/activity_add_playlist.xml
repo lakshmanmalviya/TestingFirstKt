@@ -48,7 +48,7 @@
                 tools:ignore="TouchTargetSizeCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/addPlaylist"
+                android:id="@+id/addArtist"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/pwdInput"
