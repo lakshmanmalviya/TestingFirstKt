@@ -11,12 +11,20 @@
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+<!--  the to most color where battery shows-->
         <!-- Customize your theme here. -->
     </style>
     <style name="cornerTopLeft">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSizeTopLeft">4dp</item> <!-- Adjust the corner radius as needed -->
         <item name="cornerSizeBottomLeft">4dp</item> <!-- Adjust the corner radius as needed -->
+    </style>
+    <style name="playlistImgStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">8dp</item>
+        <item name="cornerSizeTopRight">8dp</item>
+        <item name="cornerSizeBottomLeft">8dp</item>
+        <item name="cornerSizeBottomRight">8dp</item> <!-- Adjust the corner radius as needed -->
     </style>
 
 </resources>

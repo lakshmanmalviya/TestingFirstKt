@@ -66,6 +66,7 @@
                 android:textStyle="bold"
                 tools:ignore="TouchTargetSizeCheck" />
 
+
             <EditText
                 android:id="@+id/pwdInput"
                 android:layout_width="match_parent"

@@ -3,6 +3,7 @@
     <string name="default_web_id">A</string>
     <dimen name="text_size_16sp">16sp</dimen>
     <dimen name="text_size_20sp">20sp</dimen>
+    <dimen name="text_size_18sp">18sp</dimen>
     <dimen name="text_size_30sp">30sp</dimen>
     <dimen name="text_size_25sp">25sp</dimen>
     <dimen name="padding_15dp">15dp</dimen>
@@ -20,4 +21,7 @@
     <dimen name="margin_3dp">3dp</dimen>
     <dimen name="margin_10dp">10dp</dimen>
     <dimen name="margin_15dp">15dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

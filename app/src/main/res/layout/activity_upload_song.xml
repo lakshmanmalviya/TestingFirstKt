@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Activities.UploadSong">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/browseSongImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_10dp"
+            android:layout_marginTop="@dimen/margin_15dp"
+            android:layout_marginRight="@dimen/margin_10dp"
+            android:background="@drawable/corner_skybg"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/padding_10dp">
+
+            <ImageView
+                android:id="@+id/brSongImage"
+                android:layout_width="@dimen/margin_40dp"
+                android:layout_height="@dimen/margin_40dp"
+                android:layout_marginLeft="@dimen/margin_50dp"
+                android:tintMode="src_in"
+                app:srcCompat="@drawable/gallary"
+                app:tint="#EA0EDF" />
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/setSongImg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:srcCompat="@drawable/attendance" />
+
+        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/browseSong"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_15dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:background="@drawable/corner_skybg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_10dp">
+
+                <ImageView
+                    android:id="@+id/galhjhjlary"
+                    android:layout_width="@dimen/margin_40dp"
+                    android:layout_height="@dimen/margin_40dp"
+                    android:layout_weight="1"
+                    android:tintMode="src_in"
+                    app:srcCompat="@drawable/music"
+                    app:tint="#EA0EDF" />
+
+                <TextView
+                    android:id="@+id/fileName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Choose Song File"
+                    android:textColor="@color/green" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/browsebghjgh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_15dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:background="@drawable/corner_skybg"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/songName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_30dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginRight="@dimen/margin_30dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:ems="10"
+                    android:hint="Enter song name"
+                    android:inputType="textMultiLine|textPersonName"
+                    android:padding="@dimen/padding_10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_16sp"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <ImageView
+                    android:id="@+id/addFromFile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:src="@android:drawable/ic_input_add"
+                    app:srcCompat="@android:drawable/ic_input_add" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/browsehjSong"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_10dp"
+                android:layout_marginTop="@dimen/margin_15dp"
+                android:layout_marginRight="@dimen/margin_10dp"
+                android:background="@drawable/corner_skybg"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/singerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_30dp"
+                    android:layout_marginTop="@dimen/margin_10dp"
+                    android:layout_marginRight="@dimen/margin_30dp"
+                    android:layout_marginBottom="@dimen/margin_10dp"
+                    android:ems="10"
+                    android:hint="Singer name separat by,"
+                    android:inputType="textMultiLine|textPersonName"
+                    android:padding="@dimen/padding_10dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_16sp"
+                    android:textStyle="normal"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/uploadSongButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pwdInput"
+                android:layout_marginLeft="@dimen/margin_30dp"
+                android:layout_marginTop="@dimen/margin_30dp"
+                android:layout_marginRight="@dimen/margin_30dp"
+                android:background="@drawable/greenbg"
+                android:fontFamily="@font/agblaregular"
+                android:padding="@dimen/padding_10dp"
+                android:text="Submit | Upload"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_25sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

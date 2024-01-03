@@ -15,4 +15,20 @@
         android:textAlignment="center"
         android:textColor="#FF0303"
         android:textSize="24sp" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pwdInput"
+        android:layout_marginLeft="@dimen/margin_20dp"
+        android:layout_marginTop="@dimen/margin_30dp"
+        android:layout_marginRight="@dimen/margin_20dp"
+        android:background="@drawable/greenbg"
+        android:fontFamily="@font/agblaregular"
+        android:padding="@dimen/padding_10dp"
+        android:text="logout"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_size_25sp" />
 </LinearLayout>

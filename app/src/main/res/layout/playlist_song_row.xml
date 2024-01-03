@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/margin_5dp">
+
+    <ImageView
+        android:id="@+id/playlistSongImageRow"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/attendance"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginEnd="8dp"/>
+
+    <TextView
+        android:id="@+id/songNamePlaylistRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/acmeregular"
+        android:text="Kudi Nu Nachne De"
+        android:textSize="@dimen/text_size_18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/songMenuInPlaylistRow"
+        app:layout_constraintStart_toEndOf="@id/playlistSongImageRow"
+        app:layout_constraintTop_toTopOf="@id/playlistSongImageRow" />
+
+    <TextView
+        android:id="@+id/singerNamePlaylistRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Singer Names will come here"
+        app:layout_constraintStart_toEndOf="@id/playlistSongImageRow"
+        app:layout_constraintTop_toBottomOf="@id/songNamePlaylistRow"
+        app:layout_constraintEnd_toStartOf="@id/songMenuInPlaylistRow"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"/>
+
+    <ImageView
+        android:id="@+id/songMenuInPlaylistRow"
+        android:layout_width="20dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="@dimen/margin_20dp"
+        android:src="@drawable/songmenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/playlistSongImageRow"
+        app:layout_constraintBottom_toBottomOf="@id/playlistSongImageRow"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_margin="@dimen/margin_5dp"-->
+<!--    android:orientation="vertical">-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/playlistSongImageRow"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:src="@drawable/attendance" />-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginRight="@dimen/margin_15dp"-->
+<!--            android:orientation="vertical"-->
+<!--            android:paddingLeft="@dimen/padding_15dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/songNamePlaylistRow"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Kudi Nu Nachne De"-->
+<!--                android:textSize="@dimen/text_size_18sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/singerNamePlaylistRow"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Singer Names will come here" />-->
+<!--        </LinearLayout>-->
+
+<!--        <Space-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--          />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/songMenuInPlaylistRow"-->
+<!--            android:layout_width="20dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginRight="@dimen/margin_20dp"-->
+<!--            android:src="@drawable/songmenu" />-->
+
+<!--    </LinearLayout>-->
+<!--</LinearLayout>-->

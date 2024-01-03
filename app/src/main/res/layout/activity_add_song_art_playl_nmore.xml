@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Activities.AddSongArtPlaylNMore">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_10dp">
+
+                <ImageView
+                    android:id="@+id/gallary"
+                    android:layout_width="@dimen/margin_40dp"
+                    android:layout_height="@dimen/margin_40dp"
+                    android:layout_weight="1"
+                    android:tintMode="src_in"
+                    app:srcCompat="@drawable/gallary"
+                    app:tint="#EA0EDF" />
+
+                <ImageView
+                    android:id="@+id/browseSAPImage"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circleskybg"
+                    android:minWidth="100dp"
+                    android:minHeight="100dp"
+                    app:srcCompat="@android:drawable/stat_sys_upload" />
+
+                <ImageView
+                    android:id="@+id/camera"
+                    android:layout_width="@dimen/margin_40dp"
+                    android:layout_height="@dimen/margin_40dp"
+                    android:layout_weight="1"
+                    android:tintMode="src_in"
+                    app:srcCompat="@drawable/camera"
+                    app:tint="#EA0EDF" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/sapnMoreName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_30dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_30dp"
+                android:layout_marginBottom="@dimen/margin_10dp"
+                android:background="@drawable/edittextbg"
+                android:ems="10"
+                android:hint="enter name"
+                android:inputType="textMultiLine|textPersonName"
+                android:padding="@dimen/padding_10dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20sp"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <EditText
+                android:id="@+id/desSingNameMore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_30dp"
+                android:layout_marginTop="@dimen/margin_10dp"
+                android:layout_marginRight="@dimen/margin_30dp"
+                android:layout_marginBottom="@dimen/margin_10dp"
+                android:background="@drawable/edittextbg"
+                android:ems="10"
+                android:hint="description"
+                android:inputType="textMultiLine|textPersonName"
+                android:padding="@dimen/padding_10dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submitSAPButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pwdInput"
+                android:layout_marginLeft="@dimen/margin_20dp"
+                android:layout_marginTop="@dimen/margin_30dp"
+                android:layout_marginRight="@dimen/margin_20dp"
+                android:background="@drawable/greenbg"
+                android:fontFamily="@font/agblaregular"
+                android:padding="@dimen/padding_10dp"
+                android:text="Submit | Upload"
+                android:textAllCaps="false"
+                android:textSize="@dimen/text_size_25sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

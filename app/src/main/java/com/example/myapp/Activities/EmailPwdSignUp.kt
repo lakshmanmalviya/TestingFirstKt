@@ -11,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapp.Classes.MyColor
+import com.example.myapp.Classes.ReuseThings
 import com.example.myapp.Classes.STATICVAR
 import com.example.myapp.R
 import com.example.myapp.databinding.ActivityEmailPwdSignUpBinding
@@ -45,7 +46,7 @@ class EmailPwdSignUp : AppCompatActivity() {
                 if (checkInput())
                     creatAccount()
                 else{
-                    customToast(R.drawable.spotify,"Please Enter valid details");
+                   ReuseThings.customToast(applicationContext,R.drawable.spotify,"Please Enter valid details");
                     dismissBox()
                 }
             }
@@ -54,7 +55,7 @@ class EmailPwdSignUp : AppCompatActivity() {
                 if (checkInput())
                 loginAccount()
                 else{
-                 customToast(R.drawable.spotify,"Please Enter valid details");
+                    ReuseThings.customToast(applicationContext,R.drawable.spotify,"Please Enter valid details");
                   dismissBox()
                 }
             }
@@ -90,7 +91,7 @@ class EmailPwdSignUp : AppCompatActivity() {
             }
             .addOnFailureListener { e ->
                 progressDialog?.dismiss()
-               customToast(R.drawable.spotify,"Account creation is failed "+e.message);
+                ReuseThings.customToast(applicationContext,R.drawable.spotify,"Account creation is failed "+e.message);
             }
     }
     private fun loginAccount(){
@@ -102,7 +103,7 @@ class EmailPwdSignUp : AppCompatActivity() {
                     finish()
                 } else {
                     progressDialog?.dismiss()
-                    customToast(R.drawable.spotify,"Authentication failed: ${task.exception?.message}")
+                    ReuseThings.customToast(applicationContext,R.drawable.spotify,"Authentication failed: ${task.exception?.message}")
                 }
             }
     }
@@ -110,14 +111,14 @@ class EmailPwdSignUp : AppCompatActivity() {
         auth.sendPasswordResetEmail(bnd.emailInput.text.toString().trim())
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    customToast(R.drawable.spotify,"Password reset email sent.");
+                    ReuseThings.customToast(applicationContext,R.drawable.spotify,"Password reset email sent.");
                 } else {
-                    customToast(R.drawable.spotify,"Failed to send password reset email.");
+                    ReuseThings.customToast(applicationContext,R.drawable.spotify,"Failed to send password reset email.");
                 }
             }
     }
     private fun storeUserDetail(id: String?) {
-        myref = firebaseDatabase.getReference().child(STATICVAR.users).child(id!!)
+        myref = firebaseDatabase.getReference().child(STATICVAR.signedUpUsersData).child(id!!)
         val map: MutableMap<String, Any> = HashMap()
         map[STATICVAR.userId] = id
         map[STATICVAR.userEmail] = bnd.emailInput.text.toString().trim()
@@ -126,28 +127,32 @@ class EmailPwdSignUp : AppCompatActivity() {
         myref.setValue(map)
             .addOnSuccessListener {
                 dismissBox()
-                customToast(R.drawable.spotify,"Account created Successfully");
+                ReuseThings.customToast(applicationContext,R.drawable.spotify,"Account created Successfully");
                 bnd.userName.setText("")
                 bnd.emailInput.setText("")
                 bnd.pwdInput.setText("")
+                val intent = Intent(this,MasterAllPage::class.java)
+                startActivity(intent)
+                finish()
             }
             .addOnFailureListener { e ->
                 dismissBox()
-                customToast(R.drawable.spotify,"Error while saving " + e.message)
+             ReuseThings.customToast(applicationContext,"Error while saving " + e.message)
             }
     }
-    private fun customToast(image:Int,message: String){
-        val layoutInflater = layoutInflater
-        val toast = Toast(applicationContext)
-        val layout: View = layoutInflater.inflate(R.layout.custom_toast, findViewById(R.id.customeToast))
-        layout.findViewById<ImageView>(R.id.toastImage).setImageResource(image)
-        val text = layout.findViewById<TextView>(R.id.toastMessage)
-        text.text=message
-        text.setTextColor(MyColor.RED);
-//        toast.setGravity(Gravity.CENTER, 0, 0)
-        toast.setGravity(Gravity.TOP or Gravity.CENTER_HORIZONTAL, 0, 0)
-        toast.duration = Toast.LENGTH_SHORT
-        toast.view = layout
-        toast.show()
-    }
+
+//    private fun customToast(image:Int,message: String){
+//        val layoutInflater = layoutInflater
+//        val toast = Toast(applicationContext)
+//        val layout: View = layoutInflater.inflate(R.layout.custom_toast, findViewById(R.id.customeToast))
+//        layout.findViewById<ImageView>(R.id.toastImage).setImageResource(image)
+//        val text = layout.findViewById<TextView>(R.id.toastMessage)
+//        text.text=message
+//        text.setTextColor(MyColor.RED);
+////        toast.setGravity(Gravity.CENTER, 0, 0)
+//        toast.setGravity(Gravity.TOP or Gravity.CENTER_HORIZONTAL, 0, 0)
+//        toast.duration = Toast.LENGTH_SHORT
+//        toast.view = layout
+//        toast.show()
+//    }
 }

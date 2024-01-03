@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_5dp"
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="180dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@drawable/playlistbg"
+        android:background="@drawable/playlist_rowbg"
         android:gravity="center"
         android:orientation="horizontal">
 
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/playlistImageRow"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="@dimen/margin_50dp"
+            android:layout_height="40dp"
             android:background="#D71D1D"
-            android:src="@drawable/attendance"
+            android:scaleType="fitXY"
+            android:src="@drawable/spotify"
             app:shapeAppearanceOverlay="@style/cornerTopLeft" />
 
 
@@ -26,12 +28,10 @@
             android:id="@+id/playlistNameRow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:fontFamily="@font/acmeregular"
-            android:padding="@dimen/padding_10dp"
+            android:paddingLeft="@dimen/padding_5dp"
             android:text="Playlist name will come here "
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_size_16sp" />
+            android:textColor="@color/white" />
 
     </LinearLayout>
 
